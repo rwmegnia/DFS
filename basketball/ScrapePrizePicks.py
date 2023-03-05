@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Feb 18 14:06:31 2023
-
+oooo durka durak druak
 @author: robertmegnia
 """
 from datetime import datetime
