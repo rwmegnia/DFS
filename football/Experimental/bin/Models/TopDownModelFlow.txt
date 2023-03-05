@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jan 17 15:36:03 2022
+
+@author: robertmegnia
+
+Top Down Forecast Model
+
+Make Predictions for Teams first
+
+1. Predict Total Offensive Snaps
+
+     * Implied Team Score
+     * total line
+     * spread line
+     * average snaps over last 4 matchups
+     * average snaps allowed by opponent over last 4 matchups
+     
+1. Predict Total Team Fantasy Points
+
+  Features for Prediction
+  
+      * Implied team score
+      * total line
+      * spread line
+      * average team fantasy points over previous 8 games
+      * average team fantasy points allowed by opponent over previous 8 games
+
+2. Predict Team Pass Plays
+
+  Features for prediction
+  
+      * Implied team score
+      * total line
+      * spread line
+      * team fantasy points (predicted via ML model)
+      * average pass attempts over last 8 games
+      * average rush attempts over last 8 games
+      * opponent average pass attempts allowed over last 8 games
+      * opponent average rush attempts allowed over last 8 games
+  
+
+3. Predict Team Rush Plays
+
+  Features for prediction
+  
+      * Implied team score
+      * total line
+      * spread line
+      * team fantasy points (predicted via ML Model)
+      * pass attempts (predicted via ML Model)
+      * average rush attempts over last 8 games
+      * opponent average pass attempts allowed over last 8 games
+      * opponent average rush attempts allowed over last 8 games
+      
+4. Predict Total Passing Fantasy Points
+
+    Features for prediction
+    
+    * Implied Team Score
+    * total line
+    * spread line
+    * team fantasy points (predicted via ML Model)
+    * pass attempts (predicted via ML Model)
+    * rush attempts (predicted via ML Model)
+    * average team passing fantasy points over previous 8 games
+    * average team passing fantasy points allowed by opponent over 8 games
+
+5. Predict Total Rushing Fantasy Points
+
+    Features for prediction
+    
+    * Implied Team Score
+    * total line
+    * spread line
+    * team fantasy points (predicted via ML Model)
+    * pass attempts (predicted via ML Model)
+    * rush attempts (predicted via ML Model)
+    * passing fantasy points (predicted via ML Model)
+    * average passing fantasy points allowed by opponent over previous 8 games
+    * average team rushing fantasy points over previous 8 games
+    * average team rushing fantasy points allowed by opponent over 8 games
+    
+6. Predict Total Receiving Fantasy Points
+
+    Features for prediction
+    
+    * Implied Team Score
+    * total line
+    * spread line
+    * team fantasy points (Predicted via ML Model)
+    * pass attempts (Predicted via ML Model)
+    * rush attempts (Predicted via ML Model)
+    * passing fantasy points (Predicted via ML Model)
+    * average passing fantasy points allowed by opponent  over previous 8 games
+    * rushing fantasy points (Predicted via ML Model)
+    * average rushing fantasy points allowed by opponent over preious 8 games
+    * average team receiving fantasy points over previous 8 games
+    * average team receiving fantasy points allowed by opponent over 8 games
+    
+7. Predict Rushing and Receiving Fantasy points share for each player
+    ( Assume 100% of passing receiving points goes to QB)
+
+    a. Predict Rushing Fantasy Points Share
+        
+        Features for prediction (8 game running average)
+        
+        * redzone rush attempts
+        * rush yards
+        * fantasy points from rushing
+        * rush attempts
+        * rush attempt share
+        * rushing fantasy points share
+        * depth_team
+
+    b. Predict Receiving Fatnays POints Share
+    
+        Features for prediction (8 game running average)
+        
+        * redzone targets
+        * receiving yards
+        * fantasy points from receiving
+        * targets
+        * target share
+        * reception share
+        * receiving fantasy points share
+        * depth_team
+
+8. Predict fantasy points by taking the sum of the products of 
+   predicted team rushing/receiving fantasy points and predicted
+   player rushing/receiving fantasy points share
+
+"""

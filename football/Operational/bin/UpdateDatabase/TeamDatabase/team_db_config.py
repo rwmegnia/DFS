@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 15 22:38:16 2021
+
+@author: robertmegnia
+"""
+import numpy as np
+
+TEAM_STATS={
+    'air_epa':np.mean,
+    'air_yards':np.sum,
+    'comp_air_epa':np.mean,
+    'comp_yac_epa':np.mean,
+    'complete_pass':np.sum,
+    'epa':np.mean,
+    'fumble':np.sum,
+    'fumble_lost':np.sum,
+    'interception':np.sum,
+    'pass_attempt':np.sum,
+    'passing_yards':np.sum,
+    'pass_touchdown':np.sum,
+    'qb_epa':np.mean,
+    'qb_hit':np.sum,
+    'sack':np.sum,
+    'yards_after_catch':np.sum,
+    'big_pass_play':np.sum,
+    'rush_attempt':np.sum,
+    'rush_touchdown':np.sum,
+    'rushing_yards':np.sum,
+    'tackled_for_loss':np.sum,
+    'big_run':np.sum,
+    'early_down':np.sum,
+    'early_down_success':np.sum,
+    'early_down_pass':np.sum,
+    '4thDown':np.sum,
+    '4thDown_attempt':np.sum,
+    '4thDown_success':np.sum,
+    'EarlyGame_4thDown':np.sum,
+    'EarlyGame_4thDown_attempt':np.sum,
+    'EarlyGame_4thDown_success':np.sum,
+    '3rdDown':np.sum,
+    '3rdDown_success':np.sum
+    }
+
+QB_STATS=[
+    'full_name',
+    'pass_cmp',
+    'pass_att',
+    'pass_yards',
+    'pass_yds_per_att',
+    'pass_air_yards',
+    'pass_td',
+    'int',
+    'DKPts',
+    'DKPts_share_pos',
+    'passing_DKPts_share',
+    'rushing_DKPts_share',
+    'receiving_DKPts_share',
+    'passer_rating',
+    'team',
+    'opp',
+    'salary',
+    'season',
+    'week']
+
+RB_STATS=[
+    'full_name',
+    'offensive_snapcounts',
+    'rush_att',
+    'rush_share',
+    'rush_yards',
+    'rush_td',
+    'targets',
+    'rec',
+    'rec_yards',
+    'rec_td',
+    'rush_redzone_looks',
+    'PPO',
+    'DKPts',
+    'DKPts_share_pos',
+    'passing_DKPts_share',
+    'rushing_DKPts_share',
+    'receiving_DKPts_share',
+    'salary',
+    'team',
+    'opp',
+    'season',
+    'week'
+    ]
+
+REC_STATS=[
+    'full_name',
+    'offensive_snapcounts',
+    'targets',
+    'rec',
+    'rec_yards',
+    'yac',
+    'rec_air_yards',
+    'wopr',
+    'rec_td',
+    'rec_redzone_looks',
+    'PPO',
+    'DKPts',
+    'DKPts_share_pos',
+    'passing_DKPts_share',
+    'rushing_DKPts_share',
+    'receiving_DKPts_share',
+    'salary',
+    'team',
+    'opp',
+    'season',
+    'week'
+    ]

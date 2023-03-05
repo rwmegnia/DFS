@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jan  8 02:45:39 2022
+
+@author: robertmegnia
+
+DFS Model Components
+
+a. Model Development
+
+1. Locate a database/API that can be freely accessed to build a database
+2. Train a machine learning model to predict fantasy points
+3. Save models in pickle file for use in live predictions
+
+b. Live Prediction Model
+
+1. Update Database  (UpdateDatabase.py)
+
+    Before any live modeling can take place the database must be updated to
+    retrieve most recent team/plaer data.
+
+2. Retrieve active rosters for game slate
+3. Retrieve over/under, implied scores, and spreads for games
+4. 
+"""
