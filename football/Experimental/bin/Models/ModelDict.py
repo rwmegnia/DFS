@@ -5,6 +5,8 @@ Created on Wed Dec 29 13:22:59 2021
 
 @author: robertmegnia
 
+Hog Face
+
 Builds dictionaries for various machine learning models that are
 kept in the etc/model_pickles directory
 """
